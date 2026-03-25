@@ -1,53 +1,55 @@
-## CI Pipeline Configuration
-This project uses GitHub Actions to run a basic CI pipeline.
+# CI/CD Pipeline using GitHub Actions
 
-- CI tool: GitHub Actions  
-- Runner: Ubuntu (ubuntu-latest)  
-- The pipeline runs automatically:
-  - When code is pushed to the main branch
-  - When a pull request is created for the main branch  
+## Overview
 
----
+This repository implements a CI/CD pipeline using GitHub Actions to automate build, test, and deployment workflows on code commits.
 
-## Workflow Steps
-1. The workflow first downloads (checks out) the project code.  
-2. It checks whether the `index.html` file exists in the repository.  
-3. If the file is missing, the workflow fails and shows an error in the logs.  
+## Tech Stack
 
----
+* GitHub Actions
+* YAML
+* Docker (optional)
 
-## Environment Variables and Secrets
-- Normal configuration values can be added as environment variables in the workflow file.  
-- Sensitive data like tokens or passwords should be stored using GitHub Secrets for security.  
+## Pipeline Features
 
----
+* Automatic trigger on push events
+* Build stage execution
+* Test stage integration
+* Deployment workflow support
 
-## Failure Handling
-To understand how CI failures work, the workflow was intentionally broken by changing the validation step.  
-After checking the error logs, the issue was fixed and the pipeline ran successfully again.  
+## Workflow Architecture
 
----
+1. Developer pushes code to repository
+2. GitHub Actions workflow is triggered
+3. Build and validation steps are executed
+4. Deployment step is initiated (if configured)
+
+## Directory Structure
+
+```
+.github/workflows/
+```
+
+## Setup Instructions
+
+1. Add workflow YAML file under `.github/workflows/`
+2. Push code to repository
+3. Monitor execution in GitHub Actions tab
+
+## Output
+
+* Successful workflow runs in Actions tab
+* Logs for each stage (build/test/deploy)
+* Add pipeline execution screenshots
 
 ## Learning Outcomes
-- Learned how to create a GitHub Actions workflow.  
-- Understood how CI pipelines trigger automatically on push and pull requests.  
-- Learned how to read logs to debug CI failures.  
-- Understood the importance of keeping secrets secure.  
 
----
+* CI/CD pipeline design
+* Workflow automation using GitHub Actions
+* Event-driven deployment strategies
 
-## Tools and Technologies Used
-- GitHub Actions  
-- YAML  
-- Ubuntu Linux  
-- Git and GitHub  
+## Possible Enhancements
 
----
-
-## Screenshots
-Screenshots of the successful workflow run and logs are included to show the working CI pipeline.  
-
----
-
-## Conclusion
-This project helped me understand the basics of CI using GitHub Actions and how automation helps maintain code quality.
+* Add multi-environment deployment (dev/staging/prod)
+* Integrate Docker build and push
+* Add automated testing stage
