@@ -32,7 +32,8 @@ This repository implements a CI/CD pipeline using GitHub Actions to automate bui
 ## Pipeline Execution
 
 Successful workflow runs can be monitored in the GitHub Actions tab.
-<img width="960" height="600" alt="Output2 (1)" src="https://github.com/user-attachments/assets/78939799-8e57-4d28-8822-f83b120316bb" />
+<img width="960" height="566" alt="Output2 (1)" src="https://github.com/user-attachments/assets/6961713b-c2d3-4e9a-abd8-a3b0c6e424e1" />
+
 
 
 ## Workflow Architecture
